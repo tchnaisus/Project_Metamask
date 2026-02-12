@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="th" class="h-full">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card Shop</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&amp;family=Kanit:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      box-sizing: border-box;
+    }
+  </style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+</head>
+
+<body class="h-full bg-slate-950 text-white overflow-auto">
+  <div class="min-h-full w-full bg-grid relative"><!-- Ambient Background Effects -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+      <div class="absolute top-20 left-10 w-72 h-72 bg-violet-600/20 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-20 right-10 w-96 h-96 bg-cyan-500/15 rounded-full blur-3xl"></div>
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-purple-600/10 rounded-full blur-3xl"></div>
+    </div>
+    <div class="relative z-10 max-w-6xl mx-auto px-4 py-8"><!-- Header -->
+      <header class="text-center mb-10">
+        <div class="inline-block">
+          <h1 id="shopTitle" class="font-display text-4xl md:text-5xl font-black bg-gradient-to-r from-violet-400 via-cyan-400 to-violet-400 bg-clip-text text-transparent mb-2" style="animation: float 3s ease-in-out infinite;">M ALL NEW CARD</h1>
+          <div class="h-1 bg-gradient-to-r from-transparent via-violet-500 to-transparent rounded-full"></div>
+        </div><!-- Wallet Connection -->
+        <div class="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4"><button id="connectBtn" class="glow-button px-6 py-3 bg-gradient-to-r from-violet-600 to-cyan-600 rounded-xl font-semibold text-white shadow-lg shadow-violet-500/25 hover:shadow-violet-500/50 transition-all duration-300 hover:scale-105">เชื่อมต่อกระเป๋าตังค์</button>
+              <button id="disconnectBtn" class="glow-button px-6 py-3 bg-gradient-to-r from-violet-600 to-cyan-600 rounded-xl font-semibold text-white shadow-lg shadow-violet-500/25 hover:shadow-violet-500/50 transition-all duration-300 hover:scale-105"> <span class="flex items-center gap-2">
+               ยกเลิกการเชื่อมต่อ </span> </button>
+              
+          <div class="gradient-border px-5 py-3">
+             ยอดเงินคงเหลือ  <span id="balance" >0</span> <span class="text-violet-400 font-semibold">บาท</span>
+          </div>
+        </div>
+        
+      </header><!-- Main Content Grid -->
+      <div class="grid lg:grid-cols-3 gap-6"><!-- Cards Section -->
+        <div class="lg:col-span-2">
+          <h2 class="font-display text-xl font-bold text-violet-300 mb-4 flex items-center gap-2"> การ์ดที่มีจำหน่าย</h2>
+          <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4"><!-- Fire Dragon Card -->
+            
+            <!-- Start 1 -->
+            <div class="card-item opacity-0">
+              <div class="card-hover fire-card rounded-2xl p-1 shadow-xl shadow-red-500/20">
+                <div class="bg-slate-900/80 backdrop-blur rounded-xl p-4 h-full">
+                  <div class="text-center">
+                    <div class="mb-3 flex justify-center">
+                      <img src="https://pbs.twimg.com/media/G75ahsIbAAAPFCA.jpg" alt="Fire Dragon"class="w-50 h-50 object-contain"style="filter: drop-shadow(0 0 20px rgba(239, 68, 68, 0.5));">
+                    </div>
+                    <h3 class="font-display font-bold text-lg text-orange-300 mb-1">Fire Dragon</h3>
+                    <div class="flex items-center justify-center gap-1 mb-4"><span class="text-2xl font-display font-black text-white">150000</span> <span class="text-orange-400 text-sm font-semibold">M ALL NEW</span>
+                    </div>
+                    <div class="flex gap-1 justify-center mb-4"><span class="px-2 py-1 bg-red-600/30 rounded-full text-xs text-red-300">ATK +50</span> <span class="px-2 py-1 bg-orange-600/30 rounded-full text-xs text-orange-300">Fire</span>
+                    </div><button onclick="addToCart('Fire Dragon', 150000)" class="glow-button w-full py-2.5 bg-gradient-to-r from-red-600 to-orange-500 rounded-lg font-semibold text-white hover:from-red-500 hover:to-orange-400 transition-all duration-300"> เพิ่มลงตะกร้า </button>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End 1 -->
+
+            <!-- Start 1 -->
+            <div class="card-item opacity-0">
+              <div class="card-hover fire-card rounded-2xl p-1 shadow-xl shadow-red-500/20">
+                <div class="bg-slate-900/80 backdrop-blur rounded-xl p-4 h-full">
+                  <div class="text-center">
+                    <div class="mb-3 flex justify-center">
+                      <img src="https://pbs.twimg.com/media/G75ahsIbAAAPFCA.jpg" alt="Fire Dragon"class="w-50 h-50 object-contain"style="filter: drop-shadow(0 0 20px rgba(239, 68, 68, 0.5));">
+                    </div>
+                    <h3 class="font-display font-bold text-lg text-orange-300 mb-1">Fire Dragon</h3>
+                    <div class="flex items-center justify-center gap-1 mb-4"><span class="text-2xl font-display font-black text-white">150000</span> <span class="text-orange-400 text-sm font-semibold">M ALL NEW</span>
+                    </div>
+                    <div class="flex gap-1 justify-center mb-4"><span class="px-2 py-1 bg-red-600/30 rounded-full text-xs text-red-300">ATK +50</span> <span class="px-2 py-1 bg-orange-600/30 rounded-full text-xs text-orange-300">Fire</span>
+                    </div><button onclick="addToCart('Fire Dragon', 150000)" class="glow-button w-full py-2.5 bg-gradient-to-r from-red-600 to-orange-500 rounded-lg font-semibold text-white hover:from-red-500 hover:to-orange-400 transition-all duration-300"> เพิ่มลงตะกร้า </button>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End 1 -->
+
+            <!-- Start 1 -->
+            <div class="card-item opacity-0">
+              <div class="card-hover fire-card rounded-2xl p-1 shadow-xl shadow-red-500/20">
+                <div class="bg-slate-900/80 backdrop-blur rounded-xl p-4 h-full">
+                  <div class="text-center">
+                    <div class="mb-3 flex justify-center">
+                      <img src="https://pbs.twimg.com/media/G75ahsIbAAAPFCA.jpg" alt="Fire Dragon"class="w-50 h-50 object-contain"style="filter: drop-shadow(0 0 20px rgba(239, 68, 68, 0.5));">
+                    </div>
+                    <h3 class="font-display font-bold text-lg text-orange-300 mb-1">Fire Dragon</h3>
+                    <div class="flex items-center justify-center gap-1 mb-4"><span class="text-2xl font-display font-black text-white">150000</span> <span class="text-orange-400 text-sm font-semibold">M ALL NEW</span>
+                    </div>
+                    <div class="flex gap-1 justify-center mb-4"><span class="px-2 py-1 bg-red-600/30 rounded-full text-xs text-red-300">ATK +50</span> <span class="px-2 py-1 bg-orange-600/30 rounded-full text-xs text-orange-300">Fire</span>
+                    </div><button onclick="addToCart('Fire Dragon', 150000)" class="glow-button w-full py-2.5 bg-gradient-to-r from-red-600 to-orange-500 rounded-lg font-semibold text-white hover:from-red-500 hover:to-orange-400 transition-all duration-300"> เพิ่มลงตะกร้า </button>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End 1 -->
+            
+
+            
+
+          </div>
+        </div><!-- Sidebar: Cart & History -->
+        <div class="space-y-6"><!-- Cart -->
+          <div class="gradient-border p-5" style="animation: pulse-glow 3s ease-in-out infinite;">
+            <h3 class="font-display text-lg font-bold  mb-4 flex items-center gap-2">ตะกร้าสินค้าของท่าน</h3>
+            <ul id="cartList" class="space-y-2 max-h-40 overflow-auto scrollbar-custom mb-4">
+              <li class="text-slate-500 text-sm italic text-center py-4">ยังไม่มีสินค้าในตะกร้า</li>
+            </ul>
+            <div class="border-t border-violet-500/30 pt-4 mb-4">
+              <div class="flex justify-between items-center"><span class="text-slate-400">รวมทั้งหมด:</span>
+                <div class="flex items-center gap-1"><span id="total">0</span> <span class="text-violet-400 font-semibold">บาท</span>
+                </div>
+              </div>
+            </div>
+            <div class="grid grid-cols-2 gap-2"><button onclick="checkout()" class="glow-button py-2.5 bg-gradient-to-r from-green-400 to-emerald-500 rounded-lg font-semibold text-white hover:from-green-500 hover:to-emerald-400 transition-all duration-300 text-sm">ชำระเงิน</button> <button onclick="clearCart()" class="py-2.5 bg-slate-700/50 border border-slate-600 rounded-lg font-semibold text-slate-300 hover:bg-slate-600/50 transition-all duration-300 text-sm">ล้างตะกร้า </button>
+            </div>
+          </div><!-- Purchase History -->
+          <div class="gradient-border p-5">
+            <h3 class="font-display text-lg font-bold text-violet-300 mb-4 flex items-center gap-2">ประวัติการซื้อ</h3>
+            <ul id="historyList" class="space-y-2 max-h-48 overflow-auto scrollbar-custom">
+              <li class="text-slate-500 text-sm italic text-center py-4">ยังไม่มีประวัติการซื้อ</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!-- Toast Container -->
+  <div id="toastContainer" class="fixed top-4 right-4 z-50 space-y-2"></div>
+  <script src="https://cdn.jsdelivr.net/npm/ethers@6.10.0/dist/ethers.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="script.js"></script>
+
+  <script>
+    
+  </script>
+</body>
+
+</html>
