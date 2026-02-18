@@ -94,7 +94,8 @@
     
     .fire-card { background: linear-gradient(135deg, #7f1d1d 0%, #dc2626 50%, #f97316 100%); }
     .thunder-card { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #facc15 100%); }
-    .ice-card { background: linear-gradient(135deg, #0c4a6e 0%, #0ea5e9 50%, #e0f2fe 100%); }
+    .ice-card { background: linear-gradient(135deg, #480655 0%, #480655 50%, #e0f2fe 100%); }
+     .legend-card { background: linear-gradient(135deg, #fffb00 0%, #fffb00 50%, #f97316 100%); }
     
     .scrollbar-custom::-webkit-scrollbar {
       width: 6px;
@@ -116,3 +117,15 @@
         linear-gradient(90deg, rgba(139, 92, 246, 0.03) 1px, transparent 1px);
       background-size: 50px 50px;
     }
+
+  .sarabun-thin {
+     font-family: "Sarabun", sans-serif;
+     font-weight: 100;
+     font-style: normal;
+   }
+
+  .sarabun-extralight {
+    font-family: "Sarabun", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+   }
